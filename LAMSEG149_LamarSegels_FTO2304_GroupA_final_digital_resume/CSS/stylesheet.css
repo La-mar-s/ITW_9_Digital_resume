@@ -1,0 +1,272 @@
+body { 
+ margin:0px;
+    }
+
+
+section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 100px 20vw;
+  }
+
+  header, footer, article, nav, div {
+
+    background-color: #0f0f10;
+    color: #ffffff;
+  }
+
+  #pageHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 30px;
+  padding: 100px 20vw;
+  }
+
+  #pageFooter{
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    margin: 0px;
+  }
+
+    .blue {
+      background-color: #3c31dd;
+    }
+
+    .wave-header {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+  }
+  
+  .wave-header svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 150px;
+      z-index: 1;
+  }
+  
+  .wave-header .shape-fill {
+      fill: #3C31DD;
+  }
+
+  .wave-education {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-education svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 83px;
+}
+
+.wave-education .shape-fill {
+    fill: #3c31dd;
+}
+
+    img {
+        height: 250px;
+        width: 250px;
+        border-style: solid;
+        border-width: 5px;
+        border-color:  #3c31dd;
+        border-radius: 50%;
+        
+    }
+
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1fr;
+        margin-top: 0px;
+    }
+
+    h1 {
+      font-family: 'Times New Roman', Times, serif;
+      padding: 0px;
+      margin: 0;
+      color: rgb (100,100,100) ;
+      text-shadow: 3px 3px 1px #3c31dd;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+
+    a:hover {
+      color: #d44444;
+    }
+
+    .hero {
+      width: 100%;
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  form {
+      width: 90%;
+      max-width: 300px;
+      padding-bottom: 30px;
+      padding-top: 30px;
+  }
+  
+  .input-group {
+      margin-bottom: 20px;
+      position: relative;
+  }
+  
+  input, textarea {
+      width: 100%;
+      padding: 10px;
+      outline: 0;
+      border: 1px solid #fff;
+      color: #fff;
+      background: transparent;
+      font-size: 15px;
+  }
+  
+  label {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 10px;
+      color: #fff;
+      cursor: text;
+      transition: 0.2s;
+  }
+  
+  button {
+      padding: 10px 0;
+      color: #fff;
+      outline: none;
+      background: transparent;
+      border: 1px solid #fff;
+      width: 100%;
+      cursor: pointer;
+  }
+  
+  input:focus~label,
+  input:valid~label,
+  textarea:focus~label,
+  textarea:valid~label {
+      top: -35px;
+      font-size: 14px;
+  }
+  
+  .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  .row .input-group {
+      flex-basis: 48%;
+  }
+
+  .sidebar{
+    position: fixed;
+    z-index: 9999;
+    left: -350px;
+    width: 300px;
+    height: 100%;
+    background: #3c31dd;
+    transition:.5s ease;
+
+  }
+
+  h1 {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+    background: #0f0f10;
+    user-select: none;
+  }
+
+  .sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .5s ease;
+  }
+
+  /* ul li:hover {
+    padding-left: 50px;
+  } */
+
+  .sidebar ul a i {
+    margin-right: 16px;
+  }
+
+  #check{
+    display: none;
+  }
+
+  label #btn, label #cancel{
+    position: fixed;
+    z-index: 9999;
+    cursor: pointer;
+    background: #3c31dd ;
+    border-radius: 3px;
+    border-color: #0f0f10;
+  }
+
+  label #btn{
+    left: 40px;
+    top: 55px;
+    font-size: 35px;
+    color: #fff;
+    padding: 6px 12px;
+    transition: all .5 ease;
+  }
+
+  label #cancel {
+    z-index: 1111;
+    left: -250px;
+    top: 45px;
+    color: #fff;
+    padding: 4px 9px;
+    transition:.5 ease;
+  }
+
+  #check:checked ~ .sidebar {
+    left: 0;
+  }
+
+  #check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #check:checked ~ label #cancel {
+    left: 250px;
+  }
