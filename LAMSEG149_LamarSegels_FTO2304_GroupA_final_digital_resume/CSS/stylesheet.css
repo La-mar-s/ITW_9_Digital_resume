@@ -78,8 +78,7 @@ section {
 .wave-education .shape-fill {
     fill: #3c31dd;
 }
-
-    img {
+  .profile-pic {
         height: 250px;
         width: 250px;
         border-style: solid;
@@ -120,7 +119,11 @@ section {
 
     .grid-contact{
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 2;
+      display: grid;
+      justify-self: end;
+      align-self: center;  
+      grid-row-start: 1;  
     }
 
     .hero {
@@ -130,6 +133,7 @@ section {
       background-size: cover;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-row: 1fr 1fr;
   }
   
   form {
@@ -277,3 +281,31 @@ section {
     left: 300px;
   }
 
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /*hover effect */
+  .fa:hover {
+    opacity: 0.7;
+    color: #6e6969;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* github */
+  .fa-github {
+    background: #12151b;
+    color: white;
+  }
+  
+  /* linkedin */
+  .fa-linkedin {
+    background: #064c81;
+    color: white;
+  }
